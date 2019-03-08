@@ -1,0 +1,133 @@
+{
+    "definitions":{},
+    "$schema":"http://json-schema.org/draft-07/schema#",
+    "$id":"http://example.com/root.json",
+    "type":"object",
+    "title":"The Root Schema",
+    "required":[
+       "ext_id",
+       "author",
+       "kind",
+       "number",
+       "year",
+       "status",
+       "description",
+       "steps",
+       "link",
+       "introduction_date"
+    ],
+    "properties":{
+       "ext_id":{
+          "$id":"#/properties/ext_id",
+          "type":"string",
+          "title":"The Ext_id Schema",
+          "default":"",
+          "examples":[
+             "4059"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "author":{
+          "$id":"#/properties/author",
+          "type":"string",
+          "title":"The Author Schema",
+          "default":"",
+          "examples":[
+             "Governo - Governador"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "kind":{
+          "$id":"#/properties/kind",
+          "type":"string",
+          "title":"The Kind Schema",
+          "default":"",
+          "examples":[
+             "Projeto de Lei"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "number":{
+          "$id":"#/properties/number",
+          "type":"string",
+          "title":"The Number Schema",
+          "default":"",
+          "examples":[
+             "201"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "year":{
+          "$id":"#/properties/year",
+          "type":"string",
+          "title":"The Year Schema",
+          "default":"",
+          "examples":[
+             "2013"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "status":{
+          "$id":"#/properties/status",
+          "type":"string",
+          "title":"The Status Schema",
+          "default":"",
+          "examples":[
+             "APROVADO"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "description":{
+          "$id":"#/properties/description",
+          "type":"string",
+          "title":"The Description Schema",
+          "default":"",
+          "examples":[
+             "DISPÕE SOBRE A DOAÇÃO E A VENDA DE ÁREAS DE DOMÍNIO DA ADMINISTRAÇÃO PÚBLICA DIRETA E INDIRETA, PARA EFEITO DE REGULARIZAÇÃO FUNDIÁRIA DE INTERESSE SOCIAL."
+          ],
+          "pattern":"^(.*)$"
+       },
+       "steps":{
+          "$id":"#/properties/steps",
+          "type":"array",
+          "title":"The Steps Schema",
+          "items":{
+             "$id":"#/properties/steps/items",
+             "type":"array",
+             "title":"The Items Schema",
+             "items":{
+                "$id":"#/properties/steps/items/items",
+                "type":"string",
+                "title":"The Items Schema",
+                "default":"",
+                "examples":[
+                   "19/12/2013",
+                   "SAL",
+                   "Enviado para PE: Aprovado"
+                ],
+                "pattern":"^(.*)$"
+             }
+          }
+       },
+       "link":{
+          "$id":"#/properties/link",
+          "type":"string",
+          "title":"The Link Schema",
+          "default":"",
+          "examples":[
+             "https://sapl.al.ac.leg.br/media/sapl/public/materialegislativa/2013/4059/4059_texto_integral.pdf"
+          ],
+          "pattern":"^(.*)$"
+       },
+       "introduction_date":{
+          "$id":"#/properties/introduction_date",
+          "type":"string",
+          "title":"The Introduction_date Schema",
+          "default":"",
+          "examples":[
+             "2013-12-17"
+          ],
+          "pattern":"^(.*)$"
+       }
+    }
+ }

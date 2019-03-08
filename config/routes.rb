@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   get 'users/new'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  get 'favorites', to: 'bills#index'
+
+  get 'proposal/:ext_id', to: 'bills#new'
 end
