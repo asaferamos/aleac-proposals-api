@@ -41,6 +41,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'guard-rails', require: false
+  gem 'webmock'
+  gem 'json_matchers'
 end
 
 group :development do
