@@ -3,10 +3,10 @@ require 'date'
 
 class BillsController < ApplicationController
     def new
-        ext_id = params[:ext_id]
+        @ext_id = params[:ext_id]
 
         # get properties of index proposal
-        proposalPageIndex = getFile("materia/#{ext_id}")
+        proposalPageIndex = getFile("materia/#{@ext_id}")
 
         kind = proposalPageIndex.search(
             'div#div_id_tipo div.form-control-static'
@@ -33,7 +33,7 @@ class BillsController < ApplicationController
         )[0].attr('href')
 
         # get authors of proposal
-        proposalPageAuthors = getFile("materia/#{ext_id}/autoria")
+        proposalPageAuthors = getFile("materia/#{@ext_id}/autoria")
 
         authors = []
         proposalPageAuthors.search('table tr').each do |tr|
@@ -45,45 +45,15 @@ class BillsController < ApplicationController
         authors.delete("a")
 
         # get actions of proposal
-        proposalPageActions = getFile("materia/#{ext_id}/tramitacao")
-
-        actions = []
-        lastStatus = ""
-        proposalPageActions.search('table tr').each.with_index do |tr,i_tr|
-            action = []
-            t = tr.search('td').each.with_index do |td,i_td|
-                if i_td == 0
-                    action[0] = Date.parse(td.text.gsub!("\n",'').strip)
-                end
-
-                if i_td == 1
-                    action[1] = td.text.gsub!("\n",'').strip
-                end
-
-                if i_td == 2
-                    action[2] = "Enviado para #{td.text.gsub!("\n",'').strip}:"
-                end
-
-                if i_td == 3
-                    action[2] = "#{action[2]} #{td.text.gsub!("\n",'').strip}"
-                    if i_tr == 1
-                        lastStatus = td.text.gsub!("\n",'').strip
-                    end
-                end
-            end
-
-            if i_tr != 0
-                actions.push(action)
-            end
-        end
+        actions = getActions()
 
         json_response = {
-            'ext_id'      => ext_id,
+            'ext_id'      => @ext_id,
             'authors'     => authors,
             'kind'        => kind,
             'number'      => number,
             'year'        => year,
-            'status'      => lastStatus,
+            'status'      => @lastStatus,
             'description' => description.gsub!(/\r/,' '),
             'steps'       => actions,
             'link'        => Rails.configuration.url_aleac + link,
@@ -109,5 +79,41 @@ class BillsController < ApplicationController
                 "#{url_base}/#{url}"
             )
         end
+    end
+
+    def getActions
+        actions = []
+        @lastStatus = ""
+
+        proposalPageActions = getFile("materia/#{@ext_id}/tramitacao")
+        proposalPageActions.search('table tr').each.with_index do |tr,i_tr|
+            action = []
+            t = tr.search('td').each.with_index do |td,i_td|
+                if i_td == 0
+                    action[0] = Date.parse(td.text.gsub!("\n",'').strip)
+                end
+
+                if i_td == 1
+                    action[1] = td.text.gsub!("\n",'').strip
+                end
+
+                if i_td == 2
+                    action[2] = "Enviado para #{td.text.gsub!("\n",'').strip}:"
+                end
+
+                if i_td == 3
+                    action[2] = "#{action[2]} #{td.text.gsub!("\n",'').strip}"
+                    if i_tr == 1
+                        @lastStatus = td.text.gsub!("\n",'').strip
+                    end
+                end
+            end
+
+            if i_tr != 0
+                actions.push(action)
+            end
+        end
+
+        return actions
     end
 end
