@@ -28,6 +28,10 @@ class BillsController < ApplicationController
             'div#div_id_ementa div.form-control-static'
         ).text
 
+            if /\r/.match(description)
+                description = description.gsub!(/\r/,' ')
+            end
+
         link = proposalPageIndex.search(
             'div#div_id_texto_original div.form-control-static a'
         )[0].attr('href')
@@ -54,7 +58,7 @@ class BillsController < ApplicationController
             'number'      => number,
             'year'        => year,
             'status'      => @lastStatus,
-            'description' => description.gsub!(/\r/,' '),
+            'description' => description,
             'steps'       => actions,
             'link'        => Rails.configuration.url_aleac + link,
             'introduction_date' => Date.parse(introduction_date)
