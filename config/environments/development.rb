@@ -61,5 +61,5 @@ Rails.application.configure do
 
   config.debug_exception_response_format = :api
 
-  config.url_aleac = "spec/mock/sapl.al.ac.leg.br/"
+  config.url_aleac = "https://sapl.al.ac.leg.br"
 end

@@ -43,5 +43,5 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  config.url_aleac = "spec/mock/sapl.al.ac.leg.br/"
+  config.url_aleac = "spec/mock/sapl.al.ac.leg.br"
 end

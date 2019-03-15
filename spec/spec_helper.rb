@@ -32,9 +32,6 @@ RSpec.configure do |config|
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
     
-    # stub_request(:get, "https://sapl.al.ac.leg.br/").to_return(
-    #   File.new("spec/webmock/sapl.al.ac.leg.br")
-    # )
     JsonMatchers.schema_root = "spec/support/schemas"
 
   end
