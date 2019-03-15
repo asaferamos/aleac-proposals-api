@@ -60,4 +60,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.debug_exception_response_format = :api
+
+  config.url_aleac = "spec/mock/sapl.al.ac.leg.br/"
 end
