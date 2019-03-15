@@ -44,6 +44,36 @@ class BillsController < ApplicationController
         end
         authors.delete("a")
 
+        # get actions of proposal
+        proposalPageActions = getFile("materia/#{ext_id}/tramitacao")
+
+        actions = []
+        proposalPageActions.search('table tr').each.with_index do |tr,i_tr|
+            action = []
+            t = tr.search('td').each.with_index do |td,i_td|
+                if i_td == 0
+                    action[0] = Date.parse(td.text.gsub!("\n",'').strip)
+                end
+
+                if i_td == 1
+                    action[1] = td.text.gsub!("\n",'').strip
+                end
+
+                if i_td == 2
+                    action[2] = "Enviado para #{td.text.gsub!("\n",'').strip}:"
+                end
+
+                if i_td == 3
+                    action[2] = "#{action[2]} #{td.text.gsub!("\n",'').strip}"
+                end
+            end
+
+            if i_tr != 0
+                actions.push(action)
+            end
+            puts t.text
+        end
+
         json_response = {
             'ext_id'      => ext_id,
             'authors'     => authors,
@@ -51,6 +81,7 @@ class BillsController < ApplicationController
             'number'      => number,
             'year'        => year,
             'description' => description.gsub!(/\r/,' '),
+            'steps'       => actions,
             'link'        => Rails.configuration.url_aleac + link,
             'introduction_date' => Date.parse(introduction_date)
         }
