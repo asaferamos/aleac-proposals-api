@@ -2,6 +2,7 @@ require 'mechanize'
 require 'date'
 
 class BillsController < ApplicationController
+    before_action :authorize_request
     def new
         @ext_id = params[:ext_id]
 
