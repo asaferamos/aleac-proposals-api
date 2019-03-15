@@ -94,11 +94,11 @@ class BillsController < ApplicationController
                 end
 
                 if i_td == 1
-                    action[1] = td.text.gsub!("\n",'').strip
+                    action[1] = shortLocation(td.text.gsub!("\n",'').strip)
                 end
 
                 if i_td == 2
-                    action[2] = "Enviado para #{td.text.gsub!("\n",'').strip}:"
+                    action[2] = "Enviado para #{shortLocation(td.text.gsub!("\n",'').strip)}:"
                 end
 
                 if i_td == 3
@@ -115,5 +115,15 @@ class BillsController < ApplicationController
         end
 
         return actions
+    end
+
+    def shortLocation(location)
+        location = location.split(' - ')
+
+        if location[0].length < location[1].length
+            return location[0]
+        else
+            return location[1]
+        end
     end
 end
