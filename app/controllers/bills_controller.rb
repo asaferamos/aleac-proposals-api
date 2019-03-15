@@ -6,7 +6,7 @@ class BillsController < ApplicationController
         ext_id = params[:ext_id]
 
         # get properties of index proposal
-        proposalPageIndex = getFile("/materia/#{ext_id}")
+        proposalPageIndex = getFile("materia/#{ext_id}")
 
         kind = proposalPageIndex.search(
             'div#div_id_tipo div.form-control-static'
@@ -33,7 +33,7 @@ class BillsController < ApplicationController
         )[0].attr('href')
 
         # get authors of proposal
-        proposalPageAuthors = getFile("/materia/#{ext_id}/autoria")
+        proposalPageAuthors = getFile("materia/#{ext_id}/autoria")
 
         authors = []
         proposalPageAuthors.search('table tr').each do |tr|
@@ -64,14 +64,14 @@ class BillsController < ApplicationController
             url_base = Rails.configuration.url_aleac
             url = url.gsub!(/\//m,'__')
             return Nokogiri::HTML(
-                open("#{url_base}#{url}")
+                open("#{url_base}/#{url}")
             )
 
         else
             url_base = Rails.configuration.url_aleac
             agent = Mechanize.new
             return agent.get(
-                "#{url_base}#{url}"
+                "#{url_base}/#{url}"
             )
         end
     end
