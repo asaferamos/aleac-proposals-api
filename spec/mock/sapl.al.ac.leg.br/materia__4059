@@ -1,0 +1,860 @@
+HTTP/2 200 
+content-language: pt-br
+content-type: text/html; charset=utf-8
+date: Fri, 15 Mar 2019 03:02:49 GMT
+server: nginx/1.14.2
+vary: Accept-Language, Cookie
+x-frame-options: ALLOWALL
+content-length: 24285
+
+<!DOCTYPE html>
+
+
+
+
+
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="pt-br">
+<!--<![endif]-->
+
+  <head>
+    <meta charset="utf-8">
+    <title>SAPL - Sistema de Apoio ao Processo Legislativo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <link rel="icon" href="/static/sapl/img/favicon.ico"  type="image/png">
+      
+        <link type="text/css" href="/static/sapl/css/chunk-vendors.3c9fe6b4.css" rel="stylesheet" />
+        <link type="text/css" href="/static/sapl/css/global.e4ae5421.css" rel="stylesheet" />
+      
+
+      
+      
+
+    
+  </head>
+
+  <body>
+    <div class="page fadein">
+
+      
+      
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+               
+
+
+  <ul class="navbar-nav">
+    
+      
+        
+          <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+        
+      
+    
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"href="#fakeLink"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Institucional
+             <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            
+                
+                  <li class="dropdown-item"><a href="/mesa-diretora/">Mesa Diretora</a></li>
+                
+            
+                
+                  <li class="dropdown-item"><a href="/comissao/">Comissões</a></li>
+                
+            
+                
+                  <li class="dropdown-item"><a href="/sistema/frente/">Frentes</a></li>
+                
+            
+                
+                  <li class="dropdown-item"><a href="/parlamentar/">Parlamentares</a></li>
+                
+            
+                
+                  <li class="dropdown-item"><a href="/audiencia/">Audiências Públicas</a></li>
+                
+            
+          </ul>
+        </li>
+      
+    
+      
+        
+      
+    
+      
+        
+          <li class="nav-item"><a class="nav-link" href="/docadm/pesq-doc-adm">Documentos Administrativos</a></li>
+        
+      
+    
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"href="#fakeLink"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Atividade Legislativa
+             <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            
+                
+            
+                
+            
+                
+                  <li class="dropdown-item"><a href="/materia/pesquisar-materia">Matérias Legislativas</a></li>
+                
+            
+                
+                  <li class="dropdown-item"><a href="/sessao/pauta-sessao">Pautas das Sessões</a></li>
+                
+            
+                
+            
+                
+                  <li class="dropdown-item"><a href="/sistema/relatorios/">Relatórios</a></li>
+                
+            
+                
+                  <li class="dropdown-item"><a href="/sessao/pesquisar-sessao">Sessões Plenárias</a></li>
+                
+            
+                
+            
+                
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"href="#fakeLink"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Normas Jurídicas
+             <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            
+                
+                  <li class="dropdown-item"><a href="/norma/pesquisar">Pesquisar Normas Jurídicas</a></li>
+                
+            
+                
+            
+          </ul>
+        </li>
+      
+    
+      
+        
+      
+    
+  </ul>
+
+
+
+              <ul class="nav navbar-nav justify-content-end" id="autenticacao">
+                <li class="nav-item dropdown pesquisa">
+                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="/static/sapl/img/search.png"><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-item">
+                        <form class="navbar-form search-form" method="get" action="http://sapl3.interlegis.leg.br/generico/lexml_pesquisar">
+                          <input type="text" class="form-control" placeholder="Pesquisar no LexML" />
+                        </form>
+                      </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link"href="/sistema/ajuda"><img src="/static/sapl/img/manual.png"></a></li>
+                
+                  <li class="nav-item"><a class="nav-link" href="/login/"><img src="/static/sapl/img/user.png"></a></li>
+                
+              </ul>
+
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+      
+
+      
+      
+      <header class="masthead">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <img src="/media/sapl/public/casa/logotipo/logo_casa.png"
+              alt="Logo" class="img-responsive" >
+              <span class="vcenter">
+                
+                
+                  Assembleia Legislativa do Estado do Acre
+                
+                <br/><small>Sistema de Apoio ao Processo Legislativo</small>
+              </span>
+            </a>
+          </div>
+          <div class="hidden-print">
+             
+
+
+ 
+<ul class="nav nav-pills justify-content-end">
+  
+    
+      
+        <li class="nav-item active"><a class="nav-link active" href="/materia/4059">Início</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/anexada">Anexada</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/materiaassunto">Assunto</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/autoria">Autoria</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/despachoinicial">Despacho Inicial</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/documentoacessorio">Documento Acessório</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/legislacaocitada">Legislação Citada</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/numeracao">Numeração</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/tramitacao">Tramitação</a></li>
+      
+    
+  
+    
+      
+        <li class="nav-item "><a class="nav-link " href="/materia/4059/relatoria">Relatoria</a></li>
+      
+    
+  
+</ul>
+
+ 
+          </div>
+        </div>
+      </header>
+      
+      
+
+      
+      
+        <main id="content" class="content page__row">
+          <div class="container">
+
+            
+            
+
+            
+            
+              <div class="clearfix">
+
+                
+
+
+
+                
+
+                
+                  <h1 class="page-header">
+                    
+                      Projeto de Lei nº 201 de 2013
+                    
+                  </h1>
+                
+
+              </div>
+            
+
+            
+            <div id="app"></div>
+
+            
+            
+
+  <div class="context-actions clearfix">
+    
+
+      
+    
+
+        <div class="actions btn-group btn-group-sm" role="group">
+          
+          
+            <a href="/materia/pesquisar-materia" class="btn btn-outline-primary">Fazer Nova Pesquisa</a>
+          
+          
+        </div>
+          
+      
+    
+       <div class="actions btn-group btn-group-sm" role="group">
+       <a href="/materia/4059/acompanhar-materia/" class="btn btn-outline-primary">Acompanhar Matéria</a>
+       </div>
+    
+
+
+      
+      
+
+      <div class="editons float-right">
+        
+          
+        
+      </div>
+
+    
+  </div>
+
+  <div class="container-detail clearfix">
+    
+    
+      
+        <h2 class="legend">Identificação Básica</h2>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_tipo" class="form-group">
+                    <p class="control-label">Tipo de Matéria Legislativa</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">Projeto de Lei</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_ano" class="form-group">
+                    <p class="control-label">Ano</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">2013</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_numero" class="form-group">
+                    <p class="control-label">Número</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">201</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_data_apresentacao" class="form-group">
+                    <p class="control-label">Data de Apresentação</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">17/12/2013</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_numero_protocolo" class="form-group">
+                    <p class="control-label">Número do Protocolo</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_tipo_apresentacao" class="form-group">
+                    <p class="control-label">Tipo de Apresentação</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-12">
+                  <div id="div_id_texto_original" class="form-group">
+                    <p class="control-label">Texto Original</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"><a href="/media/sapl/public/materialegislativa/2013/4059/4059_texto_integral.pdf">4059_texto_integral.pdf</a></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-12">
+                  <div id="div_id_numeracao_set" class="form-group">
+                    <p class="control-label">Numeração</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"><ul><li>201/2013</li></ul></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+            
+          </div>
+        
+      
+        <h2 class="legend">Outras Informações</h2>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_apelido" class="form-group">
+                    <p class="control-label">Apelido</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_dias_prazo" class="form-group">
+                    <p class="control-label">Dias Prazo</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_polemica" class="form-group">
+                    <p class="control-label">Matéria Polêmica?</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_objeto" class="form-group">
+                    <p class="control-label">Objeto</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_regime_tramitacao" class="form-group">
+                    <p class="control-label">Regime Tramitação</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">Ordinária</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_em_tramitacao" class="form-group">
+                    <p class="control-label">Em Tramitação?</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">Sim</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_data_fim_prazo" class="form-group">
+                    <p class="control-label">Data Fim Prazo</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_data_publicacao" class="form-group">
+                    <p class="control-label">Data de Publicação</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_complementar" class="form-group">
+                    <p class="control-label">É Complementar?</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+      
+        <h2 class="legend">Origem Externa</h2>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_tipo_origem_externa" class="form-group">
+                    <p class="control-label">Tipo</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">Mensagem</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_numero_origem_externa" class="form-group">
+                    <p class="control-label">Número</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">556</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-4">
+                  <div id="div_id_ano_origem_externa" class="form-group">
+                    <p class="control-label">Ano</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">2013</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-6">
+                  <div id="div_id_local_origem_externa" class="form-group">
+                    <p class="control-label">Local de Origem</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">Poder Executivo</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="col-sm-6">
+                  <div id="div_id_data_origem_externa" class="form-group">
+                    <p class="control-label">Data</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">17/12/2013</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+      
+        <h2 class="legend">Dados Textuais</h2>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-12">
+                  <div id="div_id_ementa" class="form-group">
+                    <p class="control-label">Ementa</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static">DISPÕE SOBRE A DOAÇÃO E A VENDA DE<br/>ÁREAS DE DOMÍNIO DA ADMINISTRAÇÃO<br/>PÚBLICA DIRETA E INDIRETA, PARA EFEITO DE<br/>REGULARIZAÇÃO FUNDIÁRIA DE INTERESSE<br/>SOCIAL.</div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-12">
+                  <div id="div_id_indexacao" class="form-group">
+                    <p class="control-label">Indexação</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+          <div class="row">
+            
+              
+                <div class="col-sm-12">
+                  <div id="div_id_observacao" class="form-group">
+                    <p class="control-label">Observação</p>
+                    <div class="controls">
+                      
+                        <div class="form-control-static"></div>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+            
+          </div>
+        
+      
+    
+    
+    
+    
+
+  </div>
+
+  
+    <div class="container-table">
+      
+        <p></p>
+      
+    </div>
+    
+  
+
+
+
+          </div>
+        </main>
+
+      
+
+      
+      
+      <footer id="footer" class="footer page__row hidden-print">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <a class="footer__logo" href="#">
+                <a href="http://www.interlegis.leg.br/">
+                  <img src="/static/sapl/img/logo_interlegis.png" alt="Logo do Interlegis ">
+                </a>
+              </a>
+              <p>
+                <small>
+                  Desenvolvido pelo <a href="http://www.interlegis.leg.br/">Interlegis</a> em software livre e aberto.
+                </small>
+		<span>Release: 3.1.146</span>
+              </p>
+            </div>
+            <div class="col-md-4">
+              <a class="footer__logo" href="#">
+                <img src="/static/sapl/img/logo_cc.png" alt="Logo do Creative Commons BY SA">
+              </a>
+              <p>
+                <small>
+                  Conteúdo e dados sob licença <a href="https://creativecommons.org">Creative Commons</a> 4.0<br><a href="https://creativecommons.org/licenses/by/4.0/">Atribuir Fonte - Compartilhar Igual</a>
+                </small>
+              </p>
+            </div>
+            <div class="col-md-4">
+              
+              <address>
+                <small>
+                  <strong>
+                    <span class="org">Assembleia Legislativa do Estado do Acre</span>
+                  </strong>
+                  <br>
+                  <span class="street-address">RUA ARLINDO PORTO LEAL Nº 241</span>
+                  <br> CEP: <span class="postal-code">69900-904</span> | Telefone: <span>(68)3213-4000</span>
+                  <br>
+                  <a href="http://www.al.ac.leg.br" class="url">Site</a> |
+                  <a href="mailto:" class="email">Fale Conosco</a>
+                </small>
+              </address>
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    
+
+    
+
+      
+        <script type="text/javascript" src="/static/sapl/js/chunk-vendors.0003dc37.js" ></script>
+        <script type="text/javascript" src="/static/sapl/js/global.eb461386.js" ></script>      
+      
+
+      
+      
+
+      
+
+      <script type="text/javascript" >
+
+
+        function inIframe () {
+          try {
+              return window.self !== window.top;
+          } catch (e) {
+              return true;
+          }
+        }
+        $(document).ready(function(){
+          let iframe_set_backend = false
+          if (iframe_set_backend && !inIframe() ) {
+            location.href = location.origin + '?iframe=0'
+          }
+        });
+      </script>
+
+    
+  </body>
+</html>
