@@ -31,8 +31,21 @@ class BillsController < ApplicationController
             'div#div_id_texto_original div.form-control-static a'
         )[0].attr('href')
 
+        # get authors of proposal
+        proposalPageAuthors = getFile("/materia/#{ext_id}/autoria")
+
+        authors = []
+        proposalPageAuthors.search('table tr').each do |tr|
+            author = tr.search('td').search('a').text
+            if author != ""
+                authors.push(author)
+            end
+        end
+        authors.delete("a")
+
         json_response = {
             'ext_id'      => ext_id,
+            'authors'     => authors,
             'king'        => kind,
             'number'      => number,
             'year'        => year,
