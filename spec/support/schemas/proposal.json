@@ -6,7 +6,7 @@
     "title":"The Root Schema",
     "required":[
        "ext_id",
-       "author",
+       "authors",
        "kind",
        "number",
        "year",
@@ -27,15 +27,21 @@
           ],
           "pattern":"^(.*)$"
        },
-       "author":{
-          "$id":"#/properties/author",
-          "type":"string",
-          "title":"The Author Schema",
-          "default":"",
-          "examples":[
-             "Governo - Governador"
-          ],
-          "pattern":"^(.*)$"
+       "authors": {
+         "$id": "#/properties/authors",
+         "type": "array",
+         "title": "The Authors Schema",
+         "items": {
+           "$id": "#/properties/authors/items",
+           "type": "string",
+           "title": "The Items Schema",
+           "default": "",
+           "examples": [
+             "Governo - Governador",
+             "Teste"
+           ],
+           "pattern": "^(.*)$"
+         }
        },
        "kind":{
           "$id":"#/properties/kind",
