@@ -1,4 +1,5 @@
 require 'mechanize'
+require 'date'
 
 class BillsController < ApplicationController
     def new
@@ -50,7 +51,8 @@ class BillsController < ApplicationController
             'number'      => number,
             'year'        => year,
             'description' => description.gsub!(/\r/,' '),
-            'link'        => Rails.configuration.url_aleac + link
+            'link'        => Rails.configuration.url_aleac + link,
+            'introduction_date' => Date.parse(introduction_date)
         }
 
         render json: json_response
