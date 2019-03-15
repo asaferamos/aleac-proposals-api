@@ -48,6 +48,7 @@ class BillsController < ApplicationController
         proposalPageActions = getFile("materia/#{ext_id}/tramitacao")
 
         actions = []
+        lastStatus = ""
         proposalPageActions.search('table tr').each.with_index do |tr,i_tr|
             action = []
             t = tr.search('td').each.with_index do |td,i_td|
@@ -65,6 +66,9 @@ class BillsController < ApplicationController
 
                 if i_td == 3
                     action[2] = "#{action[2]} #{td.text.gsub!("\n",'').strip}"
+                    if i_tr == 1
+                        lastStatus = td.text.gsub!("\n",'').strip
+                    end
                 end
             end
 
@@ -79,6 +83,7 @@ class BillsController < ApplicationController
             'kind'        => kind,
             'number'      => number,
             'year'        => year,
+            'status'      => lastStatus,
             'description' => description.gsub!(/\r/,' '),
             'steps'       => actions,
             'link'        => Rails.configuration.url_aleac + link,
