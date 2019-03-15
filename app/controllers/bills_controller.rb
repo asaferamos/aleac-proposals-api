@@ -71,13 +71,12 @@ class BillsController < ApplicationController
             if i_tr != 0
                 actions.push(action)
             end
-            puts t.text
         end
 
         json_response = {
             'ext_id'      => ext_id,
             'authors'     => authors,
-            'king'        => kind,
+            'kind'        => kind,
             'number'      => number,
             'year'        => year,
             'description' => description.gsub!(/\r/,' '),
