@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_07_181554) do
+ActiveRecord::Schema.define(version: 2019_03_15_214107) do
 
   create_table "bills", force: :cascade do |t|
     t.integer "ext_id"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2019_03_07_181554) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
 
 end
