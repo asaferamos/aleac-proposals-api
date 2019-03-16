@@ -10,11 +10,11 @@ class UsersController < ApplicationController
     # POST /users
     def create
 		@user = User.new(user_params)
-		if @user.save
-			render json: @user, status: :created
-		else
-			render json: { errors: @user.errors.full_messages },
-				status: :unprocessable_entity
+		begin
+			@user.save!
+			render json: true, status: :created
+		rescue ActiveRecord::RecordNotUnique
+			render json: ['user already exists'], status: 409
 		end
     end
 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
     def user_params
 		params.permit(
-			:avatar, :name, :email, :password, :password_confirmation
+			:name, :email, :password
 		)
     end
 end
