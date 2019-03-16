@@ -6,5 +6,8 @@ Rails.application.routes.draw do
     
     get 'favorites', to: 'bills#index'
 
-    get 'proposal/:ext_id', to: 'bills#new'
+	get    'proposal/', 	   to: 'bills#index'
+	get    'proposal/:ext_id', to: 'bills#new'
+	post   'proposal/:ext_id', to: 'bills#create'
+	delete 'proposal/:ext_id', to: 'bills#destroy'
 end
