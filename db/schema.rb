@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2019_03_17_044128) do
     t.string "title"
     t.string "status"
     t.string "description"
-    t.index ["user_id"], name: "index_bills_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
