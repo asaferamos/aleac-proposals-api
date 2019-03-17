@@ -16,8 +16,12 @@ class BillsController < ApplicationController
         @ext_id = params[:ext_id]
 
         Proposal.setId(@ext_id)
+        json_return = Proposal.getProposalJson
 
-        render json: Proposal.getProposalJson
+        if Bill.exists?({user_id: @current_user.id, ext_id: @ext_id})
+            json_return['saved'] = true
+        end
+        render json: json_return
     end
 
     def create
@@ -25,8 +29,6 @@ class BillsController < ApplicationController
 
         Proposal.setId(params[:ext_id])
         jsonProposal = Proposal.getProposalJson
-
-        puts jsonProposal['kind']
 
         proposal = Bill.new({
             ext_id:  params[:ext_id],
