@@ -23,9 +23,17 @@ class BillsController < ApplicationController
     def create
         @current_user = getUserActive()
 
+        Proposal.setId(params[:ext_id])
+        jsonProposal = Proposal.getProposalJson
+
+        puts jsonProposal['kind']
+
         proposal = Bill.new({
             ext_id:  params[:ext_id],
-            user_id: @current_user.id
+            user_id: @current_user.id,
+            title:   "#{jsonProposal['kind']} nº #{jsonProposal['number']} de #{jsonProposal['year']}",
+            status:  jsonProposal['status'],
+            description: jsonProposal['description'].truncate(150)
         })
 
         # test if proposal already salved before
